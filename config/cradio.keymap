@@ -6,20 +6,18 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
+&mt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
+};
 
+&mmv {
+   time-to-max-speed-ms = <680>;
+   acceleration-exponent=<2>;
+};
 
 
 / {
-	mt {
-    	flavor = "tap-preferred";
-    	tapping_term_ms = <200>;
-	};
-
-	mmv {
-   		time-to-max-speed-ms = <680>;
-   		acceleration-exponent=<2>;
-	};
-	
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
